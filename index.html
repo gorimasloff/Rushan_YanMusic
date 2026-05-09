@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108725182', 'ym');
+        ym(108725182, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108725182" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rushan_Yan | Музыкальный продакшн</title>
-    <link rel="stylesheet" href="./style.css">
+    
+    <!-- SEO Meta Tags -->
+    <title>Rushan_Yan | Музыкальный продакшн и дискография</title>
+    <meta name="description" content="Официальный сайт Rushan_Yan. Продакшн и дискография: 33 готовых релиза для вашего успеха. Работа по системе роялти или полное отчуждение прав.">
+    <meta name="keywords" content="Rushan_Yan, музыкальный продакшн, купить песню, права на музыку, вокал, дискография">
+    
+    <link rel="canonical" href="https://gorimasloff.github.io/Rushan_YanMusic/">
+
+    <!-- Социальные превью (Open Graph) -->
+    <meta property="og:url" content="https://gorimasloff.github.io/Rushan_YanMusic/">
+    <meta property="og:title" content="Rushan_Yan | Музыкальный продакшн">
+    <meta property="og:description" content="33 готовых релиза. Твой старт — мой продакшн.">
+    <meta property="og:image" content="my logo3.png">
+
+    <link rel="icon" type="image/png" href="my logo3.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <!-- Плеер (Пути исправлены: без папки audio/) -->
-    <div class="mini-player">
-        <i class="fas fa-play-circle play-trigger" data-audio="serdce.mp3" data-title="Сердце ждет"></i>
-        <span>Сердце ждет</span>
-    </div>
-    <div class="mini-player">
-        <i class="fas fa-play-circle play-trigger" data-audio="ostatsy.mp3" data-title="Остаться"></i>
-        <span>Остаться</span>
-    </div>
-
-    <!-- Галерея (Пути исправлены: без папки images/) -->
-    <div class="scroller-track">
-        <img src="cover1.webp" alt="Обложка">
-        <img src="cover2.webp" alt="Обложка">
-        <img src="cover3.webp" alt="Обложка">
-    </div>
-
-    <audio id="main-audio-engine"></audio>
-
-    <script>
-        const audio = document.getElementById('main-audio-engine');
-        document.querySelectorAll('.play-trigger').forEach(trigger => {
-            trigger.onclick = () => {
-                const src = trigger.getAttribute('data-audio');
-                if (audio.src.includes(src)) {
-                    audio.paused ? audio.play() : audio.pause();
-                } else {
-                    audio.src = src;
-                    audio.play();
-                }
-            };
-        });
-    </script>
-</body>
-</html>
+    <link href="https://fonts.googleapis.com/css2?family=I
