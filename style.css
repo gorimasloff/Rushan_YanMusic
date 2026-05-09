@@ -6,6 +6,7 @@ body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-seri
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; width: 100%; }
 .container-wide { max-width: 1400px; margin: 0 auto; padding: 0 20px; width: 100%; }
 
+/* Навигация */
 .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(29, 185, 84, 0.3); padding: 15px 0; }
 .nav-content { display: flex; justify-content: space-between; align-items: center; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; font-weight: bold; }
@@ -15,22 +16,43 @@ body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-seri
 .nav-links a:hover { color: #1DB954; }
 .nav-links a.nav-cta { background: #1DB954; color: #fff; padding: 8px 18px; border-radius: 50px; }
 
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 80px; overflow: hidden; }
-/* ИСПРАВЛЕННЫЙ ПУТЬ К ФОНУ НИЖЕ */
-.hero-bg { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('background.jpg') center/cover no-repeat; z-index: -2; background-attachment: fixed; }
+.nav-header-tools { display: flex; align-items: center; gap: 15px; }
+.weather-widget { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 50px; font-size: 0.8rem; border: 1px solid rgba(29, 185, 84, 0.2); color: #1DB954; }
 
+.nav-social-top { display: flex; gap: 12px; align-items: center; }
+.nav-social-top a { transition: 0.3s; display: flex; align-items: center; text-decoration: none; }
+.nav-vk { color: #0077FF; font-size: 1.3rem; }
+.nav-rutube { color: #FFD200; }
+.nav-social-top a:hover { transform: scale(1.1) translateY(-2px); filter: brightness(1.2); }
+
+/* Hero */
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 80px; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('background.jpg') center/cover no-repeat; z-index: -2; background-attachment: fixed; }
 #changing-word { color: #1DB954; transition: opacity 0.5s ease; border-bottom: 4px solid #1DB954; display: inline-block; min-width: 120px; }
 .hero h1 { font-size: clamp(3rem, 10vw, 6rem); line-height: 1; margin: 0; font-family: 'Playfair Display', serif; text-transform: uppercase; }
 .hero-sub { color: #1DB954; font-size: clamp(1.2rem, 3vw, 2.2rem); margin: 20px 0; }
 .cta-button { display: inline-block; padding: 18px 45px; background: #1DB954; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
 .cta-button:hover { transform: scale(1.05); background: #1ed760; }
 
+/* Секции */
 .about, .video-section, .music-playlist-section, .travel-section, .contact-section, .faq-section, .news-section, .donate-section { padding: 100px 0; border-bottom: 1px solid #111; width: 100%; }
 h2.green-title { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1DB954; text-align: center; margin-bottom: 50px; text-transform: uppercase; }
 
+/* Статистика и Плеер */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 .stats-container { display: flex; gap: 30px; margin-bottom: 20px; }
 .stat-num { font-size: 3rem; font-weight: bold; color: #1DB954; }
 .stat-item p { margin: 0; color: #888; text-transform: uppercase; font-size: 0.7rem; }
 .mini-player { background: #0a0a0a; padding: 25px; border-radius: 20px; border: 1px solid #222; transition: 0.3s; }
-.mini-play
+.mini-player:hover { border-color: #1DB954; box-shadow: 0 0 20px rgba(29, 185, 84, 0.2); }
+#play-icon { font-size: 3rem; color: #1DB954; cursor: pointer; transition: 0.3s; }
+#play-icon:hover { transform: scale(1.1); }
+.progress-bar-container { width: 100%; height: 6px; background: #222; border-radius: 10px; overflow: hidden; }
+.progress-bar { width: 0%; height: 100%; background: #1DB954; }
+
+/* Видео и Дискография */
+.video-responsive { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; transition: 0.3s; }
+.video-responsive:hover { box-shadow: 0 0 30px rgba(29, 185, 84, 0.3); }
+.video-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.playlists-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+.playlist-card { backg
