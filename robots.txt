@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /audio/
-Disallow: /images/
 
-Sitemap: https://rushanyanmus.netlify.app/sitemap.xml
-Host: https://rushanyanmus.netlify.app
+Sitemap: https://gorimasloff.github.io/Rushan_YanMusic/sitemap.xml
+Host: https://gorimasloff.github.io/Rushan_YanMusic/
