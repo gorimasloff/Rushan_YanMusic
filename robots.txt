@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /audio/
+Disallow: /images/
+
+Sitemap: https://rushanyanmus.netlify.app/sitemap.xml
+Host: https://rushanyanmus.netlify.app
