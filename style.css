@@ -22,7 +22,7 @@ body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-seri
 .nav-social-top { display: flex; gap: 12px; align-items: center; }
 .nav-social-top a { transition: 0.3s; display: flex; align-items: center; text-decoration: none; }
 .nav-vk { color: #0077FF; font-size: 1.3rem; }
-.nav-rutube { color: #FFD200; } 
+.nav-rutube { color: #FFD200; }
 .nav-social-top a:hover { transform: scale(1.1) translateY(-2px); filter: brightness(1.2); }
 
 /* Hero */
@@ -148,6 +148,3 @@ h2.green-title { font-family: 'Playfair Display', serif; font-size: 3rem; color:
     .hero h1 { font-size: 3.5rem; }
     .nav-header-tools { order: 3; width: 100%; justify-content: center; margin-top: 10px; }
 }
-
-
-
