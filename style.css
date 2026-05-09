@@ -6,7 +6,6 @@ body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-seri
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; width: 100%; }
 .container-wide { max-width: 1400px; margin: 0 auto; padding: 0 20px; width: 100%; }
 
-/* Навигация */
 .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(29, 185, 84, 0.3); padding: 15px 0; }
 .nav-content { display: flex; justify-content: space-between; align-items: center; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; font-weight: bold; }
@@ -16,135 +15,22 @@ body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-seri
 .nav-links a:hover { color: #1DB954; }
 .nav-links a.nav-cta { background: #1DB954; color: #fff; padding: 8px 18px; border-radius: 50px; }
 
-.nav-header-tools { display: flex; align-items: center; gap: 15px; }
-.weather-widget { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 50px; font-size: 0.8rem; border: 1px solid rgba(29, 185, 84, 0.2); color: #1DB954; }
-
-.nav-social-top { display: flex; gap: 12px; align-items: center; }
-.nav-social-top a { transition: 0.3s; display: flex; align-items: center; text-decoration: none; }
-.nav-vk { color: #0077FF; font-size: 1.3rem; }
-.nav-rutube { color: #FFD200; }
-.nav-social-top a:hover { transform: scale(1.1) translateY(-2px); filter: brightness(1.2); }
-
-/* Hero */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 80px; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('images/background.jpg') center/cover no-repeat; z-index: -2; background-attachment: fixed; }
+/* ИСПРАВЛЕННЫЙ ПУТЬ К ФОНУ НИЖЕ */
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('background.jpg') center/cover no-repeat; z-index: -2; background-attachment: fixed; }
+
 #changing-word { color: #1DB954; transition: opacity 0.5s ease; border-bottom: 4px solid #1DB954; display: inline-block; min-width: 120px; }
 .hero h1 { font-size: clamp(3rem, 10vw, 6rem); line-height: 1; margin: 0; font-family: 'Playfair Display', serif; text-transform: uppercase; }
 .hero-sub { color: #1DB954; font-size: clamp(1.2rem, 3vw, 2.2rem); margin: 20px 0; }
 .cta-button { display: inline-block; padding: 18px 45px; background: #1DB954; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
 .cta-button:hover { transform: scale(1.05); background: #1ed760; }
 
-/* Секции */
 .about, .video-section, .music-playlist-section, .travel-section, .contact-section, .faq-section, .news-section, .donate-section { padding: 100px 0; border-bottom: 1px solid #111; width: 100%; }
 h2.green-title { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1DB954; text-align: center; margin-bottom: 50px; text-transform: uppercase; }
 
-/* Статистика и Плеер */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 .stats-container { display: flex; gap: 30px; margin-bottom: 20px; }
 .stat-num { font-size: 3rem; font-weight: bold; color: #1DB954; }
 .stat-item p { margin: 0; color: #888; text-transform: uppercase; font-size: 0.7rem; }
 .mini-player { background: #0a0a0a; padding: 25px; border-radius: 20px; border: 1px solid #222; transition: 0.3s; }
-.mini-player:hover { border-color: #1DB954; box-shadow: 0 0 20px rgba(29, 185, 84, 0.2); }
-#play-icon { font-size: 3rem; color: #1DB954; cursor: pointer; transition: 0.3s; }
-#play-icon:hover { transform: scale(1.1); }
-.progress-bar-container { width: 100%; height: 6px; background: #222; border-radius: 10px; overflow: hidden; }
-.progress-bar { width: 0%; height: 100%; background: #1DB954; }
-
-/* Видео и Дискография */
-.video-responsive { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; transition: 0.3s; }
-.video-responsive:hover { box-shadow: 0 0 30px rgba(29, 185, 84, 0.3); }
-.video-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-.playlists-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
-.playlist-card { background: #0a0a0a; padding: 20px; border-radius: 20px; border: 1px solid #111; transition: 0.3s; }
-.playlist-card:hover { border-color: #1DB954; transform: translateY(-5px); }
-
-/* Путешествия */
-.travel-card { display: grid; grid-template-columns: 350px 1fr; background: #0a0a0a; border-radius: 30px; overflow: hidden; border: 1px solid #111; align-items: center; transition: 0.3s; }
-.travel-card:hover { border-color: #1DB954; transform: translateY(-5px); }
-.travel-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.travel-content { padding: 40px; }
-.travel-btn { padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; transition: 0.3s; }
-.travel-btn.main { background: #1DB954; color: #fff; margin-right: 10px; }
-.travel-btn.secondary { border: 1px solid #222; color: #fff; }
-.travel-btn:hover { transform: translateY(-2px); opacity: 0.9; }
-
-/* FAQ */
-.faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.faq-item { background: #0a0a0a; padding: 30px; border-radius: 20px; border: 1px solid #111; transition: 0.3s; }
-.faq-item:hover { border-color: #1DB954; transform: translateY(-5px); }
-.faq-item h3 { color: #1DB954; margin: 0 0 10px; font-size: 1.1rem; }
-.faq-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(29, 185, 84, 0.1); border: 1px solid #1DB954; color: #1DB954; padding: 8px 18px; border-radius: 50px; text-decoration: none; font-size: 0.8rem; font-weight: bold; margin-top: 10px; transition: 0.3s; }
-.faq-btn:hover { background: #1DB954; color: #fff; }
-.faq-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
-
-/* Форма */
-.vocalist-form { max-width: 650px; margin: 0 auto 50px; background: #080808; padding: 40px; border-radius: 30px; border: 1px solid #111; }
-.form-group { margin-bottom: 15px; }
-.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 15px; background: #000; border: 1px solid #222; border-radius: 10px; color: #fff; font-family: inherit; }
-.form-group input:focus { border-color: #1DB954; }
-.submit-button { width: 100%; background: #1DB954; color: #fff; border: none; padding: 20px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-.submit-button:hover { background: #1ed760; }
-
-/* Соцсети Цвета и Ховеры */
-.social-links-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
-.social-icon-link { background: #0a0a0a; padding: 12px 20px; border-radius: 10px; border: 1px solid #222; color: #fff !important; text-decoration: none; display: flex; align-items: center; gap: 10px; min-width: 160px; justify-content: center; transition: 0.3s; }
-.social-icon-link:hover { transform: translateY(-3px); border-color: inherit; }
-
-.s-spotify i { color: #1DB954; }
-.s-spotify:hover { border-color: #1DB954; background: rgba(29, 185, 84, 0.1); }
-.s-youtube i, .s-youtube-main i { color: #FF0000; }
-.s-youtube:hover, .s-youtube-main:hover { border-color: #FF0000; background: rgba(255, 0, 0, 0.1); }
-.s-apple i { color: #fff; }
-.s-apple:hover { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
-.s-vk i { color: #0077FF; }
-.s-vk:hover { border-color: #0077FF; background: rgba(0, 119, 255, 0.1); }
-.s-rutube i { color: #FFD200; }
-.s-rutube:hover { border-color: #FFD200; background: rgba(255, 210, 0, 0.1); }
-.s-deezer i { color: #FF0092; }
-.s-deezer:hover { border-color: #FF0092; background: rgba(255, 0, 146, 0.1); }
-.s-ok i { color: #EE8208; }
-.s-ok:hover { border-color: #EE8208; background: rgba(238, 130, 8, 0.1); }
-.s-ipex i, .s-bandlink i { color: #1DB954; }
-.s-ipex:hover, .s-bandlink:hover { border-color: #1DB954; background: rgba(29, 185, 84, 0.1); }
-
-/* Донат */
-.donate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
-.donate-card { background: #0a0a0a; border: 1px solid #111; padding: 30px; border-radius: 20px; display: flex; align-items: center; text-decoration: none; transition: 0.4s; }
-.donate-card:hover { border-color: #1DB954; background: rgba(29, 185, 84, 0.05); transform: translateY(-5px); }
-.donate-icon { width: 60px; height: 60px; background: rgba(29, 185, 84, 0.1); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-right: 20px; }
-.donate-icon i { color: #1DB954; font-size: 1.5rem; }
-.donate-info h3 { margin: 0; color: #fff; font-size: 1.2rem; }
-.donate-info span { color: #888; font-size: 0.9rem; }
-
-/* Футер */
-.footer-new { background: #080808; padding: 80px 0 40px; border-top: 1px solid #111; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; }
-.footer-brand img { height: 45px; width: auto; margin-bottom: 15px; }
-.footer-brand h4 { margin: 10px 0; color: #fff; }
-.footer-nav h4, .footer-contacts h4 { color: #1DB954; margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; }
-.footer-nav a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: 0.3s; }
-.footer-nav a:hover { color: #fff; }
-.footer-bottom { border-top: 1px solid #111; padding-top: 30px; text-align: center; color: #444; font-size: 0.8rem; margin-top: 40px; }
-
-/* Бегущая строка */
-.covers-scroller { background: #050505; padding: 40px 0; overflow: hidden; border-top: 1px solid #111; }
-.scroller-track { display: flex; width: max-content; animation: scroll 40s linear infinite; gap: 20px; }
-.scroller-track img { width: 230px; height: 230px; object-fit: cover; border-radius: 10px; }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-/* Плеер липкий */
-.sticky-player { position: fixed; bottom: -100px; left: 0; width: 100%; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(20px); border-top: 1px solid rgba(29, 185, 84, 0.3); z-index: 2000; transition: 0.5s; padding: 15px 0; }
-.sticky-player.visible { bottom: 0; }
-.sticky-player-content { display: flex; align-items: center; gap: 30px; justify-content: space-between; }
-.sticky-progress-container { flex-grow: 1; height: 4px; background: #333; border-radius: 10px; overflow: hidden; }
-.sticky-progress { width: 0%; height: 100%; background: #1DB954; }
-
-.reveal { opacity: 0; transform: translateY(40px); transition: 1s all ease; }
-.reveal.active { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 900px) {
-    .about-grid, .footer-grid, .travel-card, .stats-container, .playlists-grid, .donate-grid { grid-template-columns: 1fr; text-align: center; }
-    .travel-img { height: 300px; }
-    .hero h1 { font-size: 3.5rem; }
-    .nav-header-tools { order: 3; width: 100%; justify-content: center; margin-top: 10px; }
-}
+.mini-play
