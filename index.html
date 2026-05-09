@@ -21,15 +21,396 @@
     <meta name="description" content="Официальный сайт Rushan_Yan. Продакшн и дискография: 33 готовых релиза для вашего успеха. Работа по системе роялти или полное отчуждение прав.">
     <meta name="keywords" content="Rushan_Yan, музыкальный продакшн, купить песню, права на музыку, вокал, дискография">
     
-    <link rel="canonical" href="https://gorimasloff.github.io/Rushan_YanMusic/">
+    <link rel="canonical" href="https://rushanyanmus.netlify.app/">
 
     <!-- Социальные превью (Open Graph) -->
-    <meta property="og:url" content="https://gorimasloff.github.io/Rushan_YanMusic/">
+    <meta property="og:url" content="https://rushanyanmus.netlify.app/">
     <meta property="og:title" content="Rushan_Yan | Музыкальный продакшн">
     <meta property="og:description" content="33 готовых релиза. Твой старт — мой продакшн.">
-    <meta property="og:image" content="my logo3.png">
+    <meta property="og:image" content="https://rushanyanmus.netlify.app/images/my logo3.png">
 
-    <link rel="icon" type="image/png" href="my logo3.png">
+    <link rel="icon" type="image/png" href="images/my logo3.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=I
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        .playlist-card iframe { border: none; width: 100%; height: 450px; overflow: hidden; border-radius: 10px; }
+        .faq-ans-spaced { margin-bottom: 10px; }
+        .footer-email-btn { color: #1DB954; text-decoration: none; font-size: 1.5rem; transition: 0.3s; display: inline-block; margin-bottom: 10px; }
+        .footer-email-btn:hover { color: #fff; transform: scale(1.2); }
+        .video-responsive iframe { border: none; }
+        
+        .players-list { display: flex; flex-direction: column; gap: 15px; width: 100%; margin-top: 20px; }
+        .mini-player { background: rgba(255,255,255,0.03); border: 1px solid #222; padding: 20px; border-radius: 15px; transition: 0.3s; }
+        .mini-player:hover { border-color: #1DB954; }
+        .play-trigger { font-size: 2.2rem; color: #1DB954; cursor: pointer; transition: 0.3s; }
+        .track-status-label { display: block; font-size: 0.75rem; color: #1DB954; font-weight: bold; text-transform: uppercase; margin-top: 5px; }
+
+        .video-shorts-container { max-width: 400px; margin: 0 auto; border: 1px solid #1DB954; border-radius: 20px; overflow: hidden; box-shadow: 0 0 20px rgba(29, 185, 84, 0.2); }
+        .video-header-announcement { text-align: center; color: #1DB954; margin-bottom: 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-wide nav-content">
+            <a href="#top" class="nav-logo"><img src="images/my logo3.png" alt="Rushan_Yan Logo"><span>Rushan_Yan</span></a>
+            
+            <div class="nav-header-tools">
+                <div class="weather-widget" id="weather"><span class="city">Волгоград:</span> <span id="temp">--°C</span></div>
+                <div class="nav-social-top">
+                    <a href="https://vk.com/rushan_yan" target="_blank" title="VK" class="nav-vk"><i class="fab fa-vk"></i></a>
+                    <a href="https://rutube.ru/u/rushanyanmusic/" target="_blank" title="Rutube" class="nav-rutube">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.2 4.1C18.6 3.1 14.3 3 12 3C9.7 3 5.4 3.1 2.8 4.1C1.3 4.7.2 5.9 0 7.4V16.6C0 18.1 1.1 19.3 2.6 19.9C5.1 20.9 9.3 21 11.8 21C14.3 21 18.5 20.9 21.1 19.9C22.6 19.3 23.7 18.1 23.9 16.6V7.4C24.1 5.9 23 4.7 21.2 4.1ZM13.8 14.8H10.1L9 11.3L7.9 14.8H4.2L6.1 9.2H9.8L10.9 12.7L12 9.2H15.7L13.8 14.8Z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#top">Главная</a>
+                <a href="#news-sec">Новости</a>
+                <a href="#about-sec">Сотрудничество</a>
+                <a href="#music">Дискография</a>
+                <a href="#travel-sec">Путешествия</a>
+                <a href="#apply" class="nav-cta">Твой путь к успеху</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="top" class="hero">
+        <div class="hero-bg"></div><div class="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">33 релиза на всех площадках ,выбери свой</span>
+                <h1>Твой <span id="changing-word">старт</span>.<br>Мой продакшн.</h1>
+                <p class="hero-sub">Готовый материал для твоего успеха.</p>
+                <a href="#apply" class="cta-button">Купить песню / Сотрудничать</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="covers-scroller reveal">
+        <div class="scroller-track">
+            <img src="images/cover1.webp" alt="Cover 1"><img src="images/cover2.webp" alt="Cover 2"><img src="images/cover3.webp" alt="Cover 3"><img src="images/cover4.webp" alt="Cover 4">
+            <img src="images/cover5.webp" alt="Cover 5"><img src="images/cover6.webp" alt="Cover 6"><img src="images/cover7.webp" alt="Cover 7"><img src="images/cover8.webp" alt="Cover 8">
+            <img src="images/cover1.webp" alt="Cover 1"><img src="images/cover2.webp" alt="Cover 2"><img src="images/cover3.webp" alt="Cover 3"><img src="images/cover4.webp" alt="Cover 4">
+        </div>
+    </div>
+
+    <div id="news-sec" class="news-section reveal">
+        <div class="container">
+            <h2 class="green-title">Новости проекта</h2>
+            <div class="news-ticker">
+                <div class="news-item"><span class="news-date">19 мая 2026</span><p>ГРАНДИОЗНАЯ ПРЕМЬЕРА: песня и клип "Сердце ждет" на всех площадках!</p></div>
+                <div class="news-item"><span class="news-date">май 2026</span><p>Запуск обновленной платформы: галерея релизов, FAQ и аналитика.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-sec" class="about reveal">
+        <div class="container">
+            <h2 class="green-title">Продакшн и Права</h2>
+            <div class="about-grid">
+                <div class="stats-container">
+                    <div class="stat-item"><span class="stat-num" data-target="33">0</span><p>Готовых релиза</p></div>
+                    <div class="stat-item"><span class="stat-num" data-target="3">0</span><p>Это 3 альбома, 6 EP или 10 синглов</p></div>
+                    <div class="stat-item"><span class="stat-num" data-target="100">0</span><span class="stat-percent">%</span><p>Юридическая чистота</p></div>
+                </div>
+                
+                <div class="players-list">
+                    <div class="mini-player">
+                        <div class="player-info">
+                            <i class="fas fa-play-circle play-trigger" data-audio="audio/serdce.mp3" data-title="Rushan_Yan - Сердце ждет"></i>
+                            <div class="track-meta">
+                                <span class="track-name">Сердце ждет</span>
+                                <span class="track-status-label">Премьера 19.05.2026</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                    </div>
+
+                    <div class="mini-player">
+                        <div class="player-info">
+                            <i class="fas fa-play-circle play-trigger" data-audio="audio/ostatsy.mp3" data-title="Rushan_Yan - Остаться"></i>
+                            <div class="track-meta">
+                                <span class="track-name">Остаться</span>
+                                <span class="track-status-label">Доступно к покупке</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                    </div>
+                </div>
+                
+                <audio id="main-audio-engine"></audio>
+            </div>
+        </div>
+    </div>
+
+    <div class="sticky-player" id="sticky-player">
+        <div class="container-wide sticky-player-content">
+            <div class="sticky-info"><i class="fas fa-play" id="sticky-play-btn"></i><span id="sticky-track-title">Rushan_Yan - Сердце ждет</span></div>
+            <div class="sticky-progress-container"><div class="sticky-progress"></div></div>
+        </div>
+    </div>
+
+    <div id="video-sec" class="video-section reveal">
+        <div class="container">
+            <h2 class="green-title">Видео</h2>
+            <div class="video-header-announcement">Тизер: Премьера клипа 19.05.2026</div>
+            <div class="video-shorts-container">
+                <div class="video-responsive" style="padding-bottom: 177.77%;">
+                    <iframe src="https://rutube.ru/play/embed/3022bd0b4167c87c2088a5d6e260e5da/" allowfullscreen title="Rushan_Yan Shorts" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="music" class="music-playlist-section reveal">
+        <div class="container-wide">
+            <h2 class="green-title">Дискография</h2>
+            <div class="playlists-grid">
+                <div class="playlist-card">
+                    <h3>Яндекс.Музыка</h3>
+                    <iframe src="https://music.yandex.ru/iframe/playlist/gorimaslo/1001" title="Yandex" loading="lazy"></iframe>
+                </div>
+                <div class="playlist-card">
+                    <h3>Официальная витрина</h3>
+                    <iframe allowfullscreen="true" src="https://band.link/LhZOL/iframe?youtube_enabled=1&header=1&title=1&theme=dark&player_enabled=undefined&picture=1&footer=1" scrolling="no" loading="lazy"></iframe>
+                </div>
+                <div class="playlist-card">
+                    <h3>Apple Music</h3>
+                    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" src="https://embed.music.apple.com/ru/album/%D1%82%D1%8B-%D0%B2-%D0%BC%D0%BE%D0%B5%D0%BC-%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5/1853988818" title="Apple" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="travel-sec" class="travel-section reveal">
+        <div class="container">
+            <h2 class="green-title">Мир Путешествий</h2>
+            <div class="travel-card">
+                <div class="travel-img"><img src="images/nelli-photo.webp" alt="Нелли Резепова"></div>
+                <div class="travel-content">
+                    <h3>Нелли Резепова</h3>
+                    <p class="travel-tag">турагент Aloha community</p>
+                    <p>Помогу найти идеальный тур, вдохновляющий как музыка. Отдых, который вы заслужили.</p>
+                    <div class="travel-buttons">
+                        <a href="https://t.me/alohatur_nellya/1546?single" target="_blank" class="travel-btn main">Солнечный Азербайджан</a>
+                        <a href="https://t.me/alohatur_nellya/1552?single" target="_blank" class="travel-btn main">Круиз из Сочи в Грузию</a>
+                        <a href="https://t.me/alohatur_nellya/1284?single" target="_blank" class="travel-btn main">Турция Q Aventura Park 5*</a>
+                        <a href="https://t.me/alohatur_nellya/1530?single" target="_blank" class="travel-btn main">Турция TIMO DELUXE RESORT 5*</a>
+                        <a href="https://t.me/nelli_rezepova/s/599" target="_blank" class="travel-btn secondary">Узнайте все расскажу</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-section reveal">
+        <div class="container">
+            <h2 class="green-title">Вопросы и ответы</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Как передаются права?</h3>
+                    <p class="faq-ans">Все официально: договор, роялти или по желанию с отчуждением прав.</p>
+                    <a href="certificate.pdf" target="_blank" class="faq-btn">
+                        <i class="fas fa-file-contract"></i> Сертификат
+                    </a>
+                </div>
+                <div class="faq-item">
+                    <h3>Где посмотреть?</h3>
+                    <p class="faq-ans faq-ans-spaced">Мои витрины:</p>
+                    <div class="faq-buttons">
+                        <a href="https://lk.sferoom.space/artists/100925" target="_blank" class="faq-btn">Sferoom</a>
+                        <a href="https://ipex.ru/showcase/Rushan_Yan" target="_blank" class="faq-btn">IPEX</a>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>Оплата?</h3>
+                    <p class="faq-ans">Договоры все через Sferoom или IPEX, только защищенные сделки</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="apply" class="contact-section reveal">
+        <div class="container">
+            <h2 class="green-title">Сотрудничество</h2>
+            <form class="vocalist-form" id="vocal-form" name="vocalist-application" method="POST" data-netlify="true">
+                <div class="form-group"><input type="text" name="name" placeholder="Имя" required></div>
+                <div class="form-group"><input type="text" name="social" placeholder="Телеграм / Ватсап" required></div>
+                <div class="form-group"><textarea name="msg" placeholder="Сообщение"></textarea></div>
+                <button type="submit" class="submit-button">Отправить запрос</button>
+            </form>
+            <div class="social-links-grid">
+                <h3>Слушать на всех платформах:</h3>
+                <div class="social-links-group">
+                    <a href="https://open.spotify.com/album/4OVrE1PMYYc3DryxMh9lhX" target="_blank" class="social-icon-link s-spotify"><i class="fab fa-spotify"></i><span>Spotify</span></a>
+                    <a href="https://music.youtube.com/channel/UCPs4boW6NGZINnqXz0JWqlg" target="_blank" class="social-icon-link s-youtube"><i class="fab fa-youtube"></i><span>YouTube Music</span></a>
+                    <a href="https://music.apple.com/ru/artist/rushan-yan/1836753117" target="_blank" class="social-icon-link s-apple"><i class="fab fa-apple"></i><span>Apple Music</span></a>
+                    <a href="https://www.deezer.com/ru/artist/339222371" target="_blank" class="social-icon-link s-deezer"><i class="fab fa-deezer"></i><span>Deezer</span></a>
+                    <a href="https://band.link/HUqse" target="_blank" class="social-icon-link s-bandlink"><i class="fas fa-link"></i><span>BandLink</span></a>
+                    <a href="https://vk.com/rushan_yan" target="_blank" class="social-icon-link s-vk"><i class="fab fa-vk"></i><span>VK</span></a>
+                    <a href="https://rutube.ru/u/rushanyanmusic/" target="_blank" class="social-icon-link s-rutube"><i class="fab fa-rutube"></i><span>Rutube</span></a>
+                    <a href="https://ipex.ru/showcase/Rushan_Yan" target="_blank" class="social-icon-link s-ipex"><i class="fas fa-headphones-alt"></i><span>IPEX</span></a>
+                    <a href="https://ok.ru/music/artist/122907414418029" target="_blank" class="social-icon-link s-ok"><i class="fab fa-odnoklassniki"></i><span>OK</span></a>
+                    <a href="https://www.youtube.com/@Gr_Pct" target="_blank" class="social-icon-link s-youtube-main"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="donate-sec" class="donate-section reveal">
+        <div class="container">
+            <h2 class="green-title">Поддержать проект</h2>
+            <div class="donate-grid">
+                <a href="https://tips.yandex.ru/guest/payment/3673779" target="_blank" class="donate-card">
+                    <div class="donate-icon"><i class="fas fa-coins"></i></div>
+                    <div class="donate-info"><h3>Яндекс Чаевые</h3><span>Быстрая поддержка</span></div>
+                </a>
+                <a href="https://studio.zvuk.com/donate/213236382" target="_blank" class="donate-card">
+                    <div class="donate-icon"><i class="fas fa-heart"></i></div>
+                    <div class="donate-info"><h3>Звук (Сбер)</h3><span>Донат артисту</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-new">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><img src="images/my logo3.png" alt="Rushan_Yan Logo"><h4>Rushan_Yan</h4><p>Музыкальный продакшн. 33 релиза.</p></div>
+                <div class="footer-nav"><h4>Меню</h4><a href="#top">Главная</a><a href="#news-sec">Новости</a><a href="#music">Дискография</a></div>
+                <div class="footer-contacts">
+                    <h4>Связь</h4>
+                    <a href="mailto:gorimaslo@mail.ru" class="footer-email-btn" title="Написать письмо">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <p>📱 @Rushan_Yanm</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Rushan_Yan. Все права защищены.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        async function getWeather() {
+            try {
+                const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=48.7194&longitude=44.5018&current_weather=true');
+                const data = await res.json();
+                const tempEl = document.getElementById('temp');
+                if(tempEl) tempEl.innerText = Math.round(data.current_weather.temperature) + '°C';
+            } catch (e) { console.error('Weather error'); }
+        }
+        getWeather();
+
+        const words = ["старт", "хит", "успех"];
+        let wordIdx = 0;
+        const wordEl = document.getElementById('changing-word');
+        if(wordEl) {
+            setInterval(() => {
+                wordEl.style.opacity = 0;
+                setTimeout(() => {
+                    wordIdx = (wordIdx + 1) % words.length;
+                    wordEl.innerText = words[wordIdx];
+                    wordEl.style.opacity = 1;
+                }, 500);
+            }, 3000);
+        }
+
+        const audio = document.getElementById('main-audio-engine');
+        const playTriggers = document.querySelectorAll('.play-trigger');
+        const stickyPlayBtn = document.getElementById('sticky-play-btn');
+        const stickyTrackTitle = document.getElementById('sticky-track-title');
+        const stickyProgress = document.querySelector('.sticky-progress');
+        const stickyPlayer = document.getElementById('sticky-player');
+
+        playTriggers.forEach(trigger => {
+            trigger.onclick = () => {
+                const src = trigger.getAttribute('data-audio');
+                const title = trigger.getAttribute('data-title');
+                
+                if (audio.src.includes(src)) {
+                    if (audio.paused) { audio.play(); updateIcons(trigger, true); }
+                    else { audio.pause(); updateIcons(trigger, false); }
+                } else {
+                    audio.src = src;
+                    stickyTrackTitle.innerText = title;
+                    audio.play();
+                    resetAllIcons();
+                    updateIcons(trigger, true);
+                }
+            };
+        });
+
+        function updateIcons(trigger, isPlaying) {
+            trigger.className = isPlaying ? 'fas fa-pause-circle play-trigger' : 'fas fa-play-circle play-trigger';
+            if(stickyPlayBtn) stickyPlayBtn.className = isPlaying ? 'fas fa-pause' : 'fas fa-play';
+        }
+
+        function resetAllIcons() {
+            playTriggers.forEach(t => t.className = 'fas fa-play-circle play-trigger');
+        }
+
+        if(stickyPlayBtn) {
+            stickyPlayBtn.onclick = () => {
+                if (audio.paused) { audio.play(); updateStickyIcon(true); }
+                else { audio.pause(); updateStickyIcon(false); }
+            };
+        }
+
+        function updateStickyIcon(isPlaying) {
+            if(stickyPlayBtn) stickyPlayBtn.className = isPlaying ? 'fas fa-pause' : 'fas fa-play';
+            const src = audio.getAttribute('src');
+            if(src) {
+                const activeTrigger = document.querySelector(`[data-audio="${src}"]`);
+                if(activeTrigger) activeTrigger.className = isPlaying ? 'fas fa-pause-circle play-trigger' : 'fas fa-play-circle play-trigger';
+            }
+        }
+
+        if(audio) {
+            audio.ontimeupdate = () => {
+                const pct = (audio.currentTime / audio.duration) * 100 + '%';
+                if(stickyProgress) stickyProgress.style.width = pct;
+                const src = audio.getAttribute('src');
+                if(src) {
+                    const activeTrigger = document.querySelector(`[data-audio="${src}"]`);
+                    if(activeTrigger) {
+                        const bar = activeTrigger.closest('.mini-player').querySelector('.progress-bar');
+                        if(bar) bar.style.width = pct;
+                    }
+                }
+            };
+        }
+
+        const stats = document.querySelectorAll('.stat-num');
+        let statsStarted = false;
+        function startStats() {
+            stats.forEach(s => {
+                const target = +s.getAttribute('data-target');
+                const speed = target / 50;
+                const update = () => {
+                    const val = +s.innerText;
+                    if (val < target) { s.innerText = Math.ceil(val + speed); setTimeout(update, 30); }
+                    else { s.innerText = target; }
+                };
+                update();
+            });
+        }
+
+        window.onscroll = () => {
+            if(stickyPlayer) {
+                if (window.scrollY > 800) stickyPlayer.classList.add('visible');
+                else stickyPlayer.classList.remove('visible');
+            }
+            const aboutSec = document.getElementById('about-sec');
+            if (aboutSec && !statsStarted && aboutSec.getBoundingClientRect().top < window.innerHeight) { statsStarted = true; startStats(); }
+            document.querySelectorAll(".reveal").forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add("active");
+            });
+        };
+    </script>
+</body>
+</html>
