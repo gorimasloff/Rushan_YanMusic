@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://gorimasloff.github.io/Rushan_YanMusic/sitemap.xml
+
+# Служебные папки — не индексируем
+Disallow: /images/
+Disallow: /audio/
