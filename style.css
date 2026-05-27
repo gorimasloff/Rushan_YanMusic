@@ -25,6 +25,19 @@ body { margin: 0; background: #000; color: #fff; font-family: 'Inter', sans-seri
 .nav-rutube { color: #FFD200; } 
 .nav-social-top a:hover { transform: scale(1.1) translateY(-2px); filter: brightness(1.2); }
 
+/* Стили для QR-кода в шапке (добавлено) */
+.nav-qr-code {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
+    margin: 0 15px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.nav-qr-code:hover {
+    transform: scale(1.05);
+}
+
 /* Hero */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 80px; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('images/background.jpg') center/cover no-repeat; z-index: -2; background-attachment: fixed; }
@@ -190,5 +203,3 @@ h2.green-title { font-family: 'Playfair Display', serif; font-size: 3rem; color:
     color: #fff; 
     transform: scale(1.25); 
 }
-
-
