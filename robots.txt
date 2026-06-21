@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /audio/
-Disallow: /images/
 
-Sitemap: https://gorimasloff.github.io/Rushan_YanMusic/.xml
-Host: https://gorimasloff.github.io/Rushan_YanMusic/
+Sitemap: https://gorimasloff.github.io/Rushan_YanMusic/sitemap.xml
+
+# Служебные папки — не индексируем
+Disallow: /images/
+Disallow: /audio/
